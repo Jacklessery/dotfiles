@@ -1,0 +1,157 @@
+* {
+    font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+    font-size: 12px;
+}
+
+window#waybar {
+    background-color: #0B0610;
+    color: #FFD43B;
+    border-bottom: 2px solid #5A0875;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+button {
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+button:hover {
+    background: rgba(159, 24, 207, 0.20);
+    color: #FFD43B;
+    box-shadow: none;
+}
+
+/* Módulos: fondo oscuro + borde inferior integrado */
+#clock,
+#battery,
+#cpu,
+#temperature,
+#network,
+#pulseaudio,
+#tray,
+#custom-power,
+#custom-arch,
+#window,
+#sway-mode,
+#scratchpad,
+#custom-media {
+    margin: 0;
+    padding: 0 5px;
+    background-color: #0B0610;
+    color: #FFD43B;
+    border-bottom: 2px solid #5A0875;
+}
+
+#custom-arch {
+    padding: 0 10px;
+    font-size: 17px;
+}
+
+#custom-power {
+    padding: 0 7px;
+}
+
+#custom-arch:hover,
+#custom-power:hover {
+    background-color: #9F18CF;
+    color: #FFD43B;
+    box-shadow: none;
+}
+
+#window {
+    padding: 0 5px;
+}
+
+/* Workspaces un poco más espaciosos */
+#workspaces {
+    margin: 0;
+    padding: 0;
+    background-color: #0B0610;
+    border-bottom: 2px solid #5A0875;
+}
+
+#workspaces button {
+    min-width: 0;
+    padding: 0 10px;
+    margin: 0;
+    color: #FFD43B;
+    background: transparent;
+    box-shadow: none;
+}
+
+#workspaces button label {
+    color: #FFD43B;
+}
+
+#workspaces button:hover,
+#workspaces button:hover label {
+    color: #FFD43B;
+}
+
+#workspaces button:hover {
+    background: rgba(159, 24, 207, 0.20);
+    box-shadow: none;
+}
+
+#workspaces button.active,
+#workspaces button.active label {
+    color: #FFD43B;
+}
+
+#workspaces button.active {
+    background: #9F18CF;
+    box-shadow: none;
+}
+
+#workspaces button.urgent,
+#workspaces button.urgent label {
+    color: #FFD43B;
+}
+
+#workspaces button.urgent {
+    background: #9F18CF;
+    box-shadow: none;
+}
+
+#network.disconnected,
+#temperature.critical,
+#battery.charging,
+#battery.plugged {
+    background-color: #9F18CF;
+    color: #FFD43B;
+}
+
+#pulseaudio.muted {
+    background-color: #9F18CF;
+    color: #FFD43B;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background-color: #9F18CF;
+}
+
+@keyframes blink {
+    to {
+        background-color: #9F18CF;
+        color: #FFD43B;
+    }
+}
+
+#battery.critical:not(.charging) {
+    background-color: #9F18CF;
+    color: #FFD43B;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: steps(12);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}

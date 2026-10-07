@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menu>
+    <item label="Apagar">
+        <action name="shutdown"/>
+    </item>
+    <item label="Reiniciar">
+        <action name="reboot"/>
+    </item>
+    <item label="Suspender">
+        <action name="suspend"/>
+    </item>
+    <item label="Hibernar">
+        <action name="hibernate"/>
+    </item>
+</menu>

@@ -1,0 +1,60 @@
+{
+    "logo": {
+        "type": "builtin",
+        "source": "arch",
+        "color": {
+            "1": "#9F18CF",
+            "2": "#9F18CF"
+        },
+        "padding": {
+            "right": 3
+        }
+    },
+
+    "display": {
+        "separator": "  ",
+        "color": {
+            "keys": "#FFD43B",
+            "title": "#FFD43B",
+	    "output": "#D86BFF"
+        },
+        "key": {
+            "width": 18,
+            "type": "both"
+        },
+	"percent": {
+	    "type": 9,
+	    "color": {
+		"green": "#D86BFF",
+		"yellow": "#D86BFF",
+		"red": "#D86BFF"
+	    }
+	}
+    },
+
+    "modules": [
+        "title",
+        "separator",
+        "os",
+        "kernel",
+        "uptime",
+        "packages",
+        "shell",
+	{
+          "type": "display",
+	  "key": "{module-name}",
+	  "format": "{width}x{heighy}, {refresh-rate} Hz [{type}]"
+	},
+        "wm",
+        "terminal",
+        "cpu",
+        "gpu",
+        "memory",
+        "disk",
+        {
+	  "type": "battery",
+	  "key": "{module-name}",
+          "format": "{capacity}% [{status}]"
+	}
+    ]
+}
